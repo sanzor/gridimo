@@ -3,14 +3,47 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="grid.css" />
+    <link rel="stylesheet" type="text/css" href="controls.css" />
+    <script src="cell.js"></script>
     <script src="grid.js"></script>
+    <script src="simulation.js"></script>
+    
     <script>
-        window.initGrid(4,4);
+        window.onload=function(){
+            window.initGrid(6,6);
+        }
     </script>
 </head>
 <body>
-    <div id="mygrid" class="grid-container">
+    
+    <div>
+        <div class="controlPanel">
+            <p>Simulation Panel</p>
+            <button class="button" type="button" onclick="simulation.startSim()">Start Sim</button>
+            <button class="button" type="button" onclick="simulation.stopSim()">Stop Sim</button>
+        </div>
+        <div>
+                <div>
+                        <label>XValue</label>
+                        <label>YValue</label>
+                        <label>Value</label>
+                    </div>
+                    <div>
+                            <input id="xid" type="text" value="1" />
+                            <input id="yid" type="text" value="1"/>
+                            <input id="val" type="text" value="33"/>
+                            <input class="button" type="button" onclick="update()" value="Update">
+                    </div>
+               
+        </div>
+        
     </div>
+    
+    
+    <div class="grid-container" id="mygrid">
+
+    </div>
+    
 </body>
 
 </html>
