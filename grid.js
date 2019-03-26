@@ -4,7 +4,7 @@ function update(){
     var yval= parseInt(document.getElementById('yid').value);
     var val=document.getElementById('val');
     console.log(val.value);
-    updateCell(xval,yval,val.value);
+    updateCell(xval,yval,STATE.RUNNING,val.value);
     var cells=window.grid.rows*window.grid.cols;
     if(window.grid.done>=cells){
         alert('out of bounds matrix cell to update');

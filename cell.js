@@ -2,11 +2,11 @@ var STATE={
     NC:0,
     RUNNING:1,
     DONE:2,
-    properties:{
-        0:{style:"grid-cell-nc"},
-        1:{style:"grid-cell-running"},
-        2:{style:"grid-cell-done"}
-    }
+    properties:[
+        "grid-cell-nc",
+        "grid-cell-running",
+        "grid-cell-done"
+    ]
 }
 
 var DEFAULT="grid-cell";
@@ -53,6 +53,6 @@ function updateCell(row, col,state, value) {
     if(!(value==null&& value==undefined)){
         cell.innerHTML=value;
     }
-    gridcell.updateStyle(state,cell);
+    updateStyle(state,cell);
    
 }
